@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link href="form-validation.css" rel="stylesheet">
+
+</head>
+  <body class="bg-light">
+  <div class="container">
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <h2>Checkout form</h2>
+        
+      </div>
+      <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+          
+        </div>
+        <div class="col-md-8 order-md-1">
+          <h4 class="mb-3">Billing address</h4>
+		<form method="post" action="proces.php">
+		First name:<br>
+		<input type="text" class="form-control" name="first_name">
+		<br>
+		Last name:<br>
+		<input type="text" class="form-control" name="last_name">
+		<br>
+		Username:<br>
+		<input type="text" class="form-control" name="username">
+		<br>
+		Phone number:<br>
+		<input type="text" class="form-control" name="phoneno">
+		<br>
+		Email Id:<br>
+		<input type="email" class="form-control" name="email">
+		<br>
+		Address:<br>
+		<input type="text" class="form-control" name="address">
+		<br>
+		<div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="save-info">
+              <label class="custom-control-label" for="save-info">Save this information for next time</label>
+            </div><br>
+
+           <hr class="mb-4">
+
+            <h4 class="mb-3">Payment</h4>
+
+            <div class="d-block my-3">
+            	<input type="radio" id="credit" name="payment" value="credit">
+  					<label for="male">Credit</label><br>
+ 				 <input type="radio" id="debit" name="payment" value="debit">
+  					<label for="female">Debit</label><br>
+  				<input type="radio" id="other" name="payment" value="other">
+  					<label for="other">Other</label>
+              </div>
+             <div class="row">
+              <div class="col-md-6 mb-3">
+              	Name on Card:<br>
+				<input type="text" class="form-control" name="cardname">
+				<br>
+
+				Card Number:<br>
+				<input type="text" class="form-control" name="card_no">
+				<br>
+				Expiration date:<br>
+				<input type="text" class="form-control" name="exp_date">
+				<br>
+				CVV:<br>
+				<input type="text" class="form-control" name="cvv">
+				<br>
+
+				</div></div>
+		<input type="submit"  name="save" value="submit">
+	</form>
+	</div>
+  </body>
+  <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</html>
